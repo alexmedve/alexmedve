@@ -15,6 +15,18 @@ header {
     background-size: cover;
 }
 
+h1 {
+    text-align: center;
+    left: 0;
+    margin: auto;
+    margin-top: -100px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    color: #fff;
+    letter-spacing: 2.1px;
+}
+
 .conent {
     width: 90%;
     margin: 4em auto;
@@ -105,18 +117,6 @@ nav ul li a {
     .menu-icon {
         display: block;
     }
-}
-
-h1 {
-    text-align: center;
-    left: 0;
-    margin: auto;
-    margin-top: -100px;
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    color: #fff;
-    letter-spacing: 2.1px;
 }
 
 /* .slider {
