@@ -13,23 +13,22 @@
 </head>
 
 <body>
+    <nav>
+        <div class="menu-icon">
+            <i class="fa fa-bars fa-2x"></i>
+        </div>
+        <div class="logo">
+            Ѧ
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
     <header class="v-header">
-        <nav>
-            <div class="menu-icon">
-                <i class="fa fa-bars fa-2x"></i>
-            </div>
-            <div class="logo">
-                Ѧ
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Me</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
         <div class="fullscreen-video-wrap">
             <video autoplay loop muted>
                 <source src="assets/tb.mp4" type="video/mp4">
@@ -41,25 +40,46 @@
     </header>
     <div class="container">
         <div class="profile-wrap">
+            <h2>Andrei Mija</h2>
             <img src="assets/pic.png" alt="pic" class="rounded mx-auto d-block img-fluid">
-            <a class="btn btn-lg btn-dark about_me" href="#">About me</a>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod exercitationem in nobis modi, id magnam
+                voluptatibus cumque laudantium eveniet officia. laudantium eveniet officia.
+                laudantium eveniet officia. laudantium eveniet officia.
+            </p>
         </div>
-        <div class="main-img">
-            <img src="/assets/img1.jpeg" id="current">
+        <div class="gallery">
+            <hr>
+            <h2>My Highlights</h2>
+            <div class="main-img">
+                <img src="/assets/img1.jpeg" id="current">
+            </div>
+            <div class="imgs">
+                <img src="/assets/img1.jpeg">
+                <img src="/assets/img2.jpeg">
+                <img src="/assets/img3.jpeg">
+                <img src="/assets/img4.jpg">
+                <img src="/assets/img5.jpeg">
+                <img src="/assets/img6.jpeg">
+                <img src="/assets/img7.jpeg">
+            </div>
         </div>
-        <div class="imgs">
-            <img src="/assets/img1.jpeg">
-            <img src="/assets/img2.jpeg">
-            <img src="/assets/img3.jpeg">
-            <img src="/assets/img4.jpg">
-            <img src="/assets/img5.jpeg">
-            <img src="/assets/img6.jpeg">
-            <img src="/assets/img7.jpeg">
+        <div class="insta">
+            <hr>
+            <h2><i class="fab fa-instagram"></i> My Instagram Feed</h2>
+            <div id="instafeed"></div>
         </div>
+    </div>
+    <div class="footer">
+        <ul class="nav justify-content-center">
+            <li class="nav-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li class="nav-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+        </ul>
+        <p>©Andrei Mija 2018</p>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+    <script src="script/main.js"></script>
+    <script src="script/instafeed.min.js"></script>
 </body>
 
 </html>

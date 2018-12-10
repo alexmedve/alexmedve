@@ -3,7 +3,6 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background: #333;
 }
 
 body {
@@ -13,6 +12,20 @@ body {
 .v-header {
     height: 100vh;
     color: #fff;
+}
+
+.footer {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+}
+
+.footer i {
+    font-size: 40px;
+    padding: 20px;
 }
 
 .fullscreen-video-wrap {
@@ -74,7 +87,7 @@ nav ul {
 }
 
 nav.black ul {
-    background: #000;
+    background: #333;
 }
 
 nav ul li {
@@ -88,9 +101,13 @@ nav ul li a {
     font-size: 20px;
 }
 
+nav ul li a:hover {
+    color: #fff;
+}
+
 .menu-icon {
     width: 100%;
-    background: #000;
+    background: #333;
     text-align: right;
     box-sizing: border-box;
     padding: 15px 24px;
@@ -108,11 +125,11 @@ nav ul li a {
 
     nav ul {
         max-height: 0px;
-        background: #000;
+        background: #333;
     }
 
     nav.black ul {
-        background: #000;
+        background: #333;
     }
 
     .showing {
@@ -132,10 +149,17 @@ nav ul li a {
 }
 
 .container {
+    max-width: 1400px;
     padding: 50px 0;
     margin: auto;
     border: #fff solid 3px;
     background: #fff;
+}
+
+.profile-wrap h2 {
+    text-align: center;
+    letter-spacing: 0.2em;
+    margin-bottom: 30px;
 }
 
 .profile-wrap {
@@ -145,14 +169,21 @@ nav ul li a {
     padding: 30px;
 }
 
-.about_me {
-    display: table;
+.profile-wrap p {
+    text-align: center;
     position: relative;
-    margin: 25px auto;
-    border-radius: 0;
+    margin: 30px auto;
+    font-size: 30px;
 }
 
-.main-img img, .imgs img {
+.profile-wrap img {
+    -webkit-box-shadow: 10px 10px 15px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 15px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 15px -2px rgba(0, 0, 0, 0.75);
+}
+
+.main-img img,
+.imgs img {
     width: 100%;
 }
 
@@ -181,4 +212,29 @@ nav ul li a {
 .fade-in {
     opacity: 0;
     animation: fadeIn 0.5s ease-in 1 forwards;
+}
+
+.insta,
+.gallery {
+    padding: 20px 0;
+}
+
+.insta h2,
+.gallery h2 {
+    text-align: center;
+    font-size: 40px;
+    padding: 20px;
+}
+
+#instafeed {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.instaimg:hover {
+    opacity: 0.8;
+    -moz-opacity: 0.8;
+    -webkit-opacity: 0.8;
+    transition: 0.5s;
 }

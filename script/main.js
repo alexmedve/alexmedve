@@ -2,6 +2,17 @@ $(document).ready(function() {
     $(".menu-icon").on("click", function() {
         $("nav ul").toggleClass("showing");
     });
+    
+    var userFeed = new Instafeed({
+        get: 'user',
+        userId: '8727053738',
+        limit: 6,
+        resolution: 'standard_resolution',
+        accessToken: '8727053738.1677ed0.ee3abfd56f304140bfcaa8670bf5ed4a',
+        sortBy: 'most-recent',
+        template: '<div class="instaimg"><a href="{{link}}" title="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="img-fluid"></a></div>'
+    });
+    userFeed.run();
 });
 //scroll efect
 $(window).on("scroll", function() {
