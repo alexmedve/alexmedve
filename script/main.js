@@ -1,8 +1,8 @@
-$(document).ready(function() {
-    $(".menu-icon").on("click", function() {
+$(document).ready(function () {
+    $(".menu-icon").on("click", function () {
         $("nav ul").toggleClass("showing");
     });
-    
+
     var userFeed = new Instafeed({
         get: 'user',
         userId: '8727053738',
@@ -15,11 +15,10 @@ $(document).ready(function() {
     userFeed.run();
 });
 //scroll efect
-$(window).on("scroll", function() {
-    if($(window).scrollTop()) {
+$(window).on("scroll", function () {
+    if ($(window).scrollTop()) {
         $("nav").addClass('black');
-    }
-    else {
+    } else {
         $("nav").removeClass('black');
     }
 });
@@ -45,4 +44,3 @@ function imgClick(e) {
     //change the opacity to opacity var
     e.target.style.opacity = opacity;
 }
-
