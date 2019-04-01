@@ -208,6 +208,11 @@ nav ul li a:hover {
         opacity: 1;
     }
 }
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
 
 .fade-in {
     opacity: 0;
@@ -244,15 +249,9 @@ nav ul li a:hover {
     text-align: justify;
 }
 
-.gallery-thumbs img {
+.gallery-thumbs img , .gallery-thumbs video {
     width: 100%;
     margin: 40px auto;
-}
-
-.gallery-thumbs img:hover {
-    transition: 0.5s;
-    opacity: 0.8;
-    transform: scale(1.05);
 }
 
 .gallery-thumbs h3 {
