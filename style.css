@@ -251,7 +251,7 @@ nav ul li a:hover {
 
 .gallery-thumbs img , .gallery-thumbs video {
     width: 100%;
-    margin: 40px auto;
+    margin: auto;
 }
 
 .gallery-thumbs h3 {
