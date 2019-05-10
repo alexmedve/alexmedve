@@ -14,107 +14,142 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-    <ul class="nav">
-        <li class="nav-item">
-            <a class="nav-link active" href="#">Active</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-    </ul>
+    <header class="v-header">
+        <div class="fullscreen-wrap">
+            <img src="./assets/bg.jpg">
+        </div>
+        <div class="header-content">
+            <h2>asd</h2>
+        </div>
+    </header>
     <div class="container">
-        <pre>
-            <code class="cpp">
-                    void inserare(LDI &LD, LDI p, int x)
-                    {
-                        LDI nou = new nodd;
-                        LDI q;
-                        nou->inf=x;
-                        nou->prec=nou->urm=0;
-                        if(!p)
+        <h1>Liste Dublu Inlantuite</h1>
+        <h5>Software realizat de Bianca Denisa Diaconu</h5>
+        <p>
+            Listele dublu inlantuite sunt structuri de date dinamice omogene. Ele au aceleasi caracteristici de baza ca
+            si listele simplu inlantuite. Diferenta fata de acestea consta in faptul ca, pentru fiecare nod, se retine
+            si adresa elementului anterior, ceea ce permite traversarea listei in ambele directii.
+        </p>
+        <img src="./assets/lista.png">
+        <div class="functie">
+            <h2>Inserare</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quis magni sapiente quasi illo alias
+                quibusdam, cumque incidunt obcaecati eveniet. </p>
+            <pre>
+                <code class="cpp">
+                        void inserare(LDI &LD, LDI p, int x)
                         {
-                            nou->urm=LD;
-                            if (LD)
-                                LD->prec=nou;
-                            LD=nou;
+                            LDI nou = new nodd;
+                            LDI q;
+                            nou->inf=x;
+                            nou->prec=nou->urm=0;
+                            if(!p)
+                            {
+                                nou->urm=LD;
+                                if (LD)
+                                    LD->prec=nou;
+                                LD=nou;
+                            }
+                            else
+                            {
+                                q=p->urm;
+                                p->urm=nou;
+                                nou->prec=p;
+                                nou->urm=q;
+                                if(q)
+                                    q->prec=q;
+                            }
                         }
-                        else
+                </code>
+            </pre>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h2>Afisare</h2>
+            </div>
+            <div class="card-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero facilis modi molestias quisquam velit
+                    dignissimos dolore amet cupiditate recusandae labore?</p>
+                <pre>
+                    <code class="cpp">
+                                void afisare(LDI p)
+                                {
+                                    if (!p)
+                                        cout<<"Lista vida\n";
+                                    else
+                                        while (p)
+                                        {
+                                            cout<<p->inf<<' ';
+                                            p = p->urm;
+                                        }
+                                }
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h2>Parcurgere</h2>
+            </div>
+            <div class="card-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nihil tempore qui blanditiis
+                    molestiae
+                    inventore fuga iure vero perferendis error.</p>
+                <pre>
+                    <code class="cpp">
+                        void parcurgereDubla(LDI p)
                         {
-                            q=p->urm;
-                            p->urm=nou;
-                            nou->prec=p;
-                            nou->urm=q;
-                            if(q)
-                                q->prec=q;
-                        }
-                    }
-            </code>
-        </pre>
-        <pre>
-            <code class="cpp">
-                    void afisare(LDI p)
-                    {
-                        if (!p)
-                            cout<<"Lista vida\n";
-                        else
-                            while (p)
+                            LDI ult;
+                            if (!p)
+                            {
+                                cout<<"Lista vida\n";
+                                return;
+                            }
+                            while(p)
+                            {
+                                ult=p;
+                                cout<<p->inf<<' ';
+                                p=p->urm;
+                            }
+                            cout<<'\n';
+                            p=ult;
+                            while(p)
                             {
                                 cout<<p->inf<<' ';
-                                p = p->urm;
+                                p=p->prec;
                             }
-                    }
-            </code>
-        </pre>
-        <pre>
-            <code class="cpp">
-                    void parcurgereDubla(LDI p)
-                    {
-                        LDI ult;
-                        if (!p)
-                        {
-                            cout<<"Lista vida\n";
-                            return;
+                            cout<<'\n';
                         }
-                        while(p)
-                        {
-                            ult=p;
-                            cout<<p->inf<<' ';
-                            p=p->urm;
-                        }
-                        cout<<'\n';
-                        p=ult;
-                        while(p)
-                        {
-                            cout<<p->inf<<' ';
-                            p=p->prec;
-                        }
-                        cout<<'\n';
-                    }
-            </code>
-        </pre>
-        <pre>
-            <code class="cpp">
-                    void stergere(LDI &LD, LDI p)
-                    {
-                        LDI q = p->prec;
-                        LDI r = p->urm;
-                        if(q)
-                            q->urm=r;
-                        if(r)
-                            r->prec=q;
-                        if(p==LD)
-                            LD=r;
-                        delete p;
-                    }
-            </code>
-        </pre>
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h2>Stergere</h2>
+            </div>
+            <div class="card-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel excepturi eligendi inventore provident
+                    dolor? Ex veniam sit totam nobis neque?</p>
+                <pre>
+                            <code class="cpp">
+                                    void stergere(LDI &LD, LDI p)
+                                    {
+                                        LDI q = p->prec;
+                                        LDI r = p->urm;
+                                        if(q)
+                                            q->urm=r;
+                                        if(r)
+                                            r->prec=q;
+                                        if(p==LD)
+                                            LD=r;
+                                        delete p;
+                                    }
+                            </code>
+                    </pre>
+            </div>
+        </div>
+        <h2>Exemplucoaie</h2>
         <div data-pym-src="https://www.jdoodle.com/embed/v0/1cgl"></div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -126,9 +161,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-=======
-    <div data-pym-src="https://www.jdoodle.com/embed/v0/1bwG"></div>
->>>>>>> b5a842899acfb8d81f4aaa24b27738644ebcf5ce
     <script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
     <script src="./main.js"></script>
