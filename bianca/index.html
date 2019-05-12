@@ -31,37 +31,41 @@
             si adresa elementului anterior, ceea ce permite traversarea listei in ambele directii.
         </p>
         <img src="./assets/lista.png">
-        <div class="functie">
-            <h2>Inserare</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quis magni sapiente quasi illo alias
-                quibusdam, cumque incidunt obcaecati eveniet. </p>
-            <pre>
-                <code class="cpp">
-                        void inserare(LDI &LD, LDI p, int x)
-                        {
-                            LDI nou = new nodd;
-                            LDI q;
-                            nou->inf=x;
-                            nou->prec=nou->urm=0;
-                            if(!p)
+        <div class="card">
+            <div class="card-header">
+                <h2>Inserare</h2>
+            </div>
+            <div class="card-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quis magni sapiente quasi illo alias
+                    quibusdam, cumque incidunt obcaecati eveniet. </p>
+                <pre>
+                    <code class="cpp">
+                            void inserare(LDI &LD, LDI p, int x)
                             {
-                                nou->urm=LD;
-                                if (LD)
-                                    LD->prec=nou;
-                                LD=nou;
+                                LDI nou = new nodd;
+                                LDI q;
+                                nou->inf=x;
+                                nou->prec=nou->urm=0;
+                                if(!p)
+                                {
+                                    nou->urm=LD;
+                                    if (LD)
+                                        LD->prec=nou;
+                                    LD=nou;
+                                }
+                                else
+                                {
+                                    q=p->urm;
+                                    p->urm=nou;
+                                    nou->prec=p;
+                                    nou->urm=q;
+                                    if(q)
+                                        q->prec=q;
+                                }
                             }
-                            else
-                            {
-                                q=p->urm;
-                                p->urm=nou;
-                                nou->prec=p;
-                                nou->urm=q;
-                                if(q)
-                                    q->prec=q;
-                            }
-                        }
-                </code>
-            </pre>
+                    </code>
+                </pre>
+            </div>
         </div>
         <div class="card">
             <div class="card-header">
