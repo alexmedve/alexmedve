@@ -50,7 +50,7 @@ body {
     width: 100%;
     color: #fff;
     letter-spacing: 2.1px;
-    font-size: 150px;
+    font-size: 100px;
 }
 
 .container h1 {
@@ -65,4 +65,8 @@ body {
 .container p {
     font-size: 25px;
     text-align: justify;
+}
+
+.card-body ol li, .card-body ul li {
+    font-size: 20px;
 }

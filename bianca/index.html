@@ -3,8 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Bianca Denisa Diaconu">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -14,160 +12,201 @@
 </head>
 
 <body>
-    <header class="v-header">
+    <header class="v-header" id="target">
         <div class="fullscreen-wrap">
             <img src="./assets/bg.jpg">
         </div>
         <div class="header-content">
-            <h2>asd</h2>
+            <h2>Liste Simplu Înlanțuite</h2>
         </div>
     </header>
     <div class="container">
-        <h1>Liste Dublu Inlantuite</h1>
+        <h1>Liste Simplu Înlanțuite</h1>
         <h5>Software realizat de Bianca Denisa Diaconu</h5>
         <p>
-            Listele dublu inlantuite sunt structuri de date dinamice omogene. Ele au aceleasi caracteristici de baza ca
-            si listele simplu inlantuite. Diferenta fata de acestea consta in faptul ca, pentru fiecare nod, se retine
-            si adresa elementului anterior, ceea ce permite traversarea listei in ambele directii.
+            O lista dublu inlanțuită este o structură de date constituită dintr-o succesiune de elemente denumite
+            noduri. Fiecare nod din listă conține 3 părți: o parte de informație (în care sunt memorate informațiile
+            corespunzătoare nodului, specifice problemei) și două părți de legatura (în care este memorată adresa
+            următorului element din listă și respectiv adresa precedentului element din listă).
         </p>
-        <img src="./assets/lista.png">
         <div class="card">
             <div class="card-header">
-                <h2>Inserare</h2>
+                <h2>Declarația listei dublu înlanțuite</h2>
             </div>
             <div class="card-body">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quis magni sapiente quasi illo alias
-                    quibusdam, cumque incidunt obcaecati eveniet. </p>
+                <p>
+                    Declarația structurii care reprezintă un nod dintr-o listă dublu înlănțuită cu informații întregi va
+                    fi:
+                </p>
                 <pre>
                     <code class="cpp">
-                            void inserare(LDI &LD, LDI p, int x)
-                            {
-                                LDI nou = new nodd;
-                                LDI q;
-                                nou->inf=x;
-                                nou->prec=nou->urm=0;
-                                if(!p)
-                                {
-                                    nou->urm=LD;
-                                    if (LD)
-                                        LD->prec=nou;
-                                    LD=nou;
-                                }
-                                else
-                                {
-                                    q=p->urm;
-                                    p->urm=nou;
-                                    nou->prec=p;
-                                    nou->urm=q;
-                                    if(q)
-                                        q->prec=q;
-                                }
-                            }
-                    </code>
-                </pre>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <h2>Afisare</h2>
-            </div>
-            <div class="card-body">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero facilis modi molestias quisquam velit
-                    dignissimos dolore amet cupiditate recusandae labore?</p>
-                <pre>
-                    <code class="cpp">
-                                void afisare(LDI p)
-                                {
-                                    if (!p)
-                                        cout<<"Lista vida\n";
-                                    else
-                                        while (p)
-                                        {
-                                            cout<<p->inf<<' ';
-                                            p = p->urm;
-                                        }
-                                }
-                    </code>
-                </pre>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-                <h2>Parcurgere</h2>
-            </div>
-            <div class="card-body">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nihil tempore qui blanditiis
-                    molestiae
-                    inventore fuga iure vero perferendis error.</p>
-                <pre>
-                    <code class="cpp">
-                        void parcurgereDubla(LDI p)
+                        struct nod
                         {
-                            LDI ult;
-                            if (!p)
-                            {
-                                cout<<"Lista vida\n";
-                                return;
-                            }
-                            while(p)
-                            {
-                                ult=p;
-                                cout<<p->inf<<' ';
-                                p=p->urm;
-                            }
-                            cout<<'\n';
-                            p=ult;
-                            while(p)
-                            {
-                                cout<<p->inf<<' ';
-                                p=p->prec;
-                            }
-                            cout<<'\n';
-                        }
+                            int inf;
+                            struct nod *urm, *pre;
+                        };
+                        typedef struct nod *lista;
                     </code>
                 </pre>
             </div>
         </div>
         <div class="card">
             <div class="card-header">
-                <h2>Stergere</h2>
+                <h2><i>Exemplu</i></h2>
             </div>
             <div class="card-body">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel excepturi eligendi inventore provident
-                    dolor? Ex veniam sit totam nobis neque?</p>
-                <pre>
-                            <code class="cpp">
-                                    void stergere(LDI &LD, LDI p)
-                                    {
-                                        LDI q = p->prec;
-                                        LDI r = p->urm;
-                                        if(q)
-                                            q->urm=r;
-                                        if(r)
-                                            r->prec=q;
-                                        if(p==LD)
-                                            LD=r;
-                                        delete p;
-                                    }
-                            </code>
-                    </pre>
+                <p>Putem figura o listă dublu înlănțuită cu elemente întregi astfel:</p>
+                <img src="./assets/liste.jpg" alt="liste" class="img-fluid">
             </div>
         </div>
-        <h2>Exemplucoaie</h2>
-        <div data-pym-src="https://www.jdoodle.com/embed/v0/1cgl"></div>
+        <div class="card">
+            <div class="card-header">
+                <h2>Inserare unui nod intr-o listă dublu înlănțuită</h2>
+            </div>
+            <div class="card-body">
+                <p>Pentru inserare vom implementa o funcție denumită <strong>Inserare</strong> cu 3 parametrii:</p>
+                <ol>
+                    <li>
+                        <strong>prim</strong> - pointer care conține adresa primului nod din lista în care se face
+                        inserarea; acest parametru va fi transmis prin referință deoarece în urma inserării începutul
+                        listei se poate modifica.
+                    </li>
+                    <li>
+                        <strong>p</strong> - pointer care conține adresa nodului din listă după care se face inserarea;
+                        dacă <strong>p</strong> este <strong>NULL</strong> deducem ca inserarea noului nod se va face la
+                        începutul liste
+                    </li>
+                    <li>
+                        <strong>x</strong> - informația nodului care urmează sa fie inserat in listă.
+                    </li>
+                </ol>
+                <p>
+                    Vom aloca dinamic memorie pentru un nou nod, a cărui adresă o vom reține în variabila pointer
+                    <strong>q</strong>. În zona de informații vom memora valoarea <strong>x (q -> inf) = x</strong>.
+                    <br>
+                    La inserare apar două cazuri distincte:
+                </p>
+                <ul>
+                    <li>
+                        Dacă <strong>p != NULL</strong> inserarea se face în interiorul listei
+                    </li>
+                    <li>
+                        Dacă <strong>p == NULL</strong> noul nod va fi inserat la începutul listei
+                    </li>
+                </ul>
+                <h3><i>Exemplu</i></h3>
+                <p>
+                    Să ilustrăm pas cu pas inserarea la începutul listei din exemplul precedent a unui nod, cu
+                    informația 3, nod al carui adresă va fi memorat in pointerul q:
+                </p>
+                <ol>
+                    <li>
+                        Creăm o legătura de la noul nod către primul nod din listă, memorand in campul
+                        <strong>urm</strong> al noului nod adresa primului nod din listă (q -> urm = prim). Noul nod va
+                        fi primul nod din listă, deci nu are precedent (q -> pre = NULL)
+                    </li>
+                    <img src="./assets/inserare.jpg" alt="inserare" class="img-fluid">
+                    <li>
+                        Precedentul primului nod din listă va fi q (prim -> pre = q), iar primul nod din listă este de
+                        acum noul nod (prim = q).
+                    </li>
+                    <img src="./assets/inserare2.jpg" alt="inserare 2" class="img-fluid">
+                </ol>
+                <p>
+                    În cel de-al doilea caz trebuie sa inserăm noul nod după nodul a cărui adresă este memorată in
+                    parametrul p.
+                </p>
+                <h3><i>Exemplu</i></h3>
+                <p>
+                    Să ilustrăm pas cu pas inserarea in lista din exemplul precedent a unui nod cu informația 3, după
+                    nodul cu informația 7
+                </p>
+                <ol>
+                    <li>
+                        Creăm legăturile dintre noul nod și precedentul său în listă (q -> prev = p), respectiv
+                        succesorul său in listă - nodul indicat de p -> urm (q -> urm = p -> urm):
+                    </li>
+                    <img src="./assets/inserare3.jpg" alt="inserare 3" class="img-fluid">
+                    <li>
+                        Modificăm legăturile dintre nodurile din listă: dupa nodul indicat de p va urma noul nod (p ->
+                        urm = q), iar înaintae nodului care urma după cel indicat de p (dacă acesta există) va fi noul
+                        nod (q -> urm -> pre = q)
+                    </li>
+                    <img src="./assets/inserare4.jpg" alt="inserare 4" class="img-fluid">
+                </ol>
+                <pre>
+                    <code class="cpp">
+                            void insert(lista &prim, lista p, int x)
+                                {
+                                    lista q = new nod;
+                                    q -< inf = x;
+                                    p -> pre = p;
+                                    if(!p) //inserarea la inceputul listei
+                                    {
+                                        if (prim) prim -> pre = q;
+                                        prim = q;
+                                    }
+                                }
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h2>Ștergerea unui nod dintr-o listă dublu înlănțuită</h2>
+            </div>
+            <div class="card-body">
+                <p>Pentru ștergere vom implementa o funcție numită <strong>delete</strong> cu 2 parametrii:</p>
+                <ol>
+                    <li>
+                        <strong>prim</strong> - pointer care conține adresa primului nod al listei din care se face
+                        ștergerea; acest parametru va fi transmis prin referință, deoarece în urma ștergerii,
+                        începutul listei se poate modifica.
+                    </li>
+                    <li>
+                        <strong>q</strong> - pointer care conține adresa nodului din listă ce urmează a fi șters.
+                    </li>
+                </ol>
+                <p>
+                    Pentru simplitate, vom utiliza 2 pointeri suplimentari, <strong>p</strong> care reține adresa
+                    nodului ce preceda nodul de șters și <strong>r</strong>
+                    care reține adresa nodului ce succedă nodul de șters. Dacă p == NULL va fi șters primul nod din
+                    listă și va trebui să actualizăm valoarea parametrului <strong>prim</strong>.
+                </p>
+                <pre>
+                    <code class="cpp">
+                                void delete(lista & prim, lista q)
+                                {
+                                    lista p = q -> pre,
+                                    r = q -> urm;
+                                    if (p) p -> urm = r;
+                                        else prim = r;
+                                    if (r) r -> pre = p;
+                                    delete q;
+                                }
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h2>
+                    Consultarea unei liste dublu înlănțuite
+                </h2>
+            </div>
+            <div class="card-body">
+                <p>
+                    Consultarea unei liste dublu înlănțuite se realizează in mod similar cu cea a unei liste simplu
+                    înlănțuite, numai că o listă dublu înlănțuită poate fi consultată atât in sens direct (utilizând
+                    legaturile urm), cât și în sens invers (utilizând legaturile pre).
+                </p>
+            </div>
+        </div>
+        <a href="#target" role="button" class="btn btn-primary btn-lg btn-block">
+            Back
+        </a>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-    <script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
-    <script src="./main.js"></script>
     <script>
         hljs.initHighlightingOnLoad();
     </script>
