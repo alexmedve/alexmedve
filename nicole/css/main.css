@@ -28,6 +28,7 @@ body {
 .wrapper section h2,
 .wrapper section h3 {
   text-shadow: 0px 3px 6px grey;
+  opacity: 0;
 }
 
 .wrapper section h1,
@@ -36,6 +37,10 @@ body {
   font-size: 2.4rem;
   padding: 0;
   margin: 0;
+}
+
+.wrapper section h3 {
+  font-size: 1.5rem;
 }
 
 .wrapper section .heading {
@@ -132,6 +137,43 @@ body {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
     grid-area: personal;
+  }
+}
+
+.heading-anim {
+  -webkit-animation-name: heading-anim;
+          animation-name: heading-anim;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes heading-anim {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes heading-anim {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 /*# sourceMappingURL=main.css.map */
