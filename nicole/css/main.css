@@ -50,6 +50,7 @@ body {
 .wrapper section.hero {
   background: url("../assets/nicole hero.png");
   background-size: cover;
+  background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,6 +65,7 @@ body {
 .wrapper section.work {
   background: url("../assets/model.jpeg");
   background-size: cover;
+  background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,6 +80,7 @@ body {
 .wrapper section.personal {
   background: url("../assets/nicole sweater.jpeg");
   background-size: cover;
+  background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -87,6 +90,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media only screen and (max-width: 490px) {
+  html {
+    font-size: 10px;
+  }
 }
 
 @media only screen and (min-width: 768px) {

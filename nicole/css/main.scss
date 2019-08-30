@@ -55,6 +55,7 @@ body {
         // padding-top: 8em;
         background: url('../assets/nicole\ hero.png');
         background-size: cover;
+        background-position: center;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -63,6 +64,7 @@ body {
     section.work {
         background: url('../assets/model.jpeg');
         background-size: cover;
+        background-position: center;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -71,9 +73,16 @@ body {
     section.personal {
         background: url('../assets/nicole\ sweater.jpeg');
         background-size: cover;
+        background-position: center;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    html {
+        font-size: 10px;
     }
 }
 
