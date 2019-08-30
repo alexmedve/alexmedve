@@ -65,6 +65,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  grid-area: 'hero';
 }
 
 .wrapper section.work {
@@ -80,6 +81,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  grid-area: 'work';
 }
 
 .wrapper section.personal {
@@ -95,6 +97,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  grid-area: 'personal';
 }
 
 @media only screen and (max-width: 490px) {
@@ -106,6 +109,25 @@ body {
 @media only screen and (min-width: 768px) {
   html {
     font-size: 18px;
+  }
+  section.hero {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: hero;
+  }
+  section.work {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: work;
+  }
+  section.personal {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: personal;
+  }
+  .wrapper {
+        grid-template-areas: "hero hero" "work personal";
   }
 }
 
@@ -127,16 +149,6 @@ body {
   }
   section.hero h1 {
     font-size: 3.2rem;
-  }
-  section.work {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: work;
-  }
-  section.personal {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-area: personal;
   }
 }
 
@@ -174,6 +186,43 @@ body {
     opacity: 1;
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
+  }
+}
+
+.button-anim {
+  -webkit-animation-name: button-anim;
+          animation-name: button-anim;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes button-anim {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes button-anim {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
 }
 /*# sourceMappingURL=main.css.map */

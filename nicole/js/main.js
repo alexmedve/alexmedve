@@ -5,7 +5,6 @@ function init() {
     const personal = document.querySelector('.personal .inner .heading h2');
     setTimeout(() => {
         hero.classList.add('heading-anim');
-        about.classList.add('heading-anim');
     }, 600);
     setTimeout(() => {
         work.classList.add('heading-anim');
@@ -13,6 +12,9 @@ function init() {
     setTimeout(() => {
         personal.classList.add('heading-anim');
     }, 1200);
+    setTimeout(() => {
+        about.classList.add('button-anim');
+    }, 1500);
 }
 
 window.onload = init;

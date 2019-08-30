@@ -60,6 +60,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        grid-area: 'hero';
     }
 
     section.work {
@@ -69,6 +70,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        grid-area: 'work';
     }
 
     section.personal {
@@ -78,6 +80,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        grid-area: 'personal';
     }
 }
 
@@ -90,6 +93,24 @@ body {
 @media only screen and (min-width: 768px) {
     html {
         font-size: 18px;
+    }
+
+    section.hero {
+        grid-area: hero;
+    }
+
+    section.work {
+        grid-area: work;
+    }
+
+    section.personal {
+        grid-area: personal;
+    }
+
+    .wrapper {
+        grid-template-areas:
+        "hero hero"
+        "work personal";
     }
 }
 
@@ -107,14 +128,6 @@ body {
 
     section.hero h1 {
         font-size: 3.2rem;
-    }
-
-    section.work {
-        grid-area: work;
-    }
-
-    section.personal {
-        grid-area: personal;
     }
 }
 
@@ -134,5 +147,24 @@ body {
     100% {
         opacity: 1;
         transform: translateY(0px)
+    }
+}
+
+.button-anim {
+    animation-name: button-anim;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes button-anim {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px)
     }
 }
