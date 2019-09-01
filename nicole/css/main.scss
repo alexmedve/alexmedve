@@ -227,3 +227,75 @@ nav {
 .menu {
     cursor: pointer;
 }
+
+.nav-open-anim {
+    animation-name: nav-open-anim;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes nav-open-anim {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.nav-link-anim {
+    animation-name: nav-link-anim;
+    animation-duration: 0.5s;
+    animation-delay: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes nav-link-anim {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-open-anim-reverse {
+    animation-name: nav-open-anim-reverse;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes nav-open-anim-reverse {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.nav-link-anim-reverse {
+    animation-name: nav-link-anim-reverse;
+    animation-duration: 0.5s;
+    animation-delay: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes nav-link-anim-reverse {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
