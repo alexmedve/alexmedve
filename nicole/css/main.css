@@ -244,6 +244,12 @@ nav {
   padding: 20px 0px;
 }
 
+nav a {
+  text-decoration: none;
+  color: inherit;
+  z-index: 3;
+}
+
 .logo {
   font-size: 1.4rem;
 }
@@ -279,6 +285,12 @@ nav {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
+}
+
+.work-link,
+.about-link,
+.personal-link {
+  opacity: 0;
 }
 
 .nav-open h3 {
@@ -333,8 +345,8 @@ nav {
           animation-name: nav-link-anim;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  -webkit-animation-delay: 0.55s;
+          animation-delay: 0.55s;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
   -webkit-animation-fill-mode: forwards;
@@ -349,8 +361,8 @@ nav {
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 
@@ -362,8 +374,8 @@ nav {
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 
@@ -380,33 +392,31 @@ nav {
 
 @-webkit-keyframes nav-open-anim-reverse {
   0% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
   }
 }
 
 @keyframes nav-open-anim-reverse {
   0% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
   }
 }
 
 .nav-link-anim-reverse {
   -webkit-animation-name: nav-link-anim-reverse;
           animation-name: nav-link-anim-reverse;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
   -webkit-animation-fill-mode: forwards;
@@ -414,28 +424,20 @@ nav {
 }
 
 @-webkit-keyframes nav-link-anim-reverse {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-  }
-  100% {
+  from {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+  }
+  to {
+    opacity: 0;
   }
 }
 
 @keyframes nav-link-anim-reverse {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-  }
-  100% {
+  from {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+  }
+  to {
+    opacity: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

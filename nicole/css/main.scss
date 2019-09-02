@@ -182,6 +182,12 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0px;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        z-index: 3;
+    }
 }
 
 .logo {
@@ -214,6 +220,12 @@ nav {
     grid-column: 2/3;
 }
 
+.work-link,
+.about-link,
+.personal-link {
+    opacity: 0;
+}
+
 .nav-open h3 {
     font-size: 1.7rem;
     padding-bottom: 30px;
@@ -239,6 +251,7 @@ nav {
     0% {
         transform: translateY(-100%);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -247,7 +260,7 @@ nav {
 .nav-link-anim {
     animation-name: nav-link-anim;
     animation-duration: 0.5s;
-    animation-delay: 0.3s;
+    animation-delay: 0.55s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
@@ -260,7 +273,7 @@ nav {
 
     100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0px);
     }
 }
 
@@ -273,29 +286,27 @@ nav {
 
 @keyframes nav-open-anim-reverse {
     0% {
-        transform: translateY(-100%);
-    }
-    100% {
         transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%);
     }
 }
 
 .nav-link-anim-reverse {
     animation-name: nav-link-anim-reverse;
-    animation-duration: 0.5s;
-    animation-delay: 0.3s;
+    animation-duration: 0.2s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
 
 @keyframes nav-link-anim-reverse {
-    0% {
-        opacity: 0;
-        transform: translateY(10px);
+    from {
+        opacity: 1;
     }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0);
+    to {
+        opacity: 0;
     }
 }
