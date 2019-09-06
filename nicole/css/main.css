@@ -446,6 +446,7 @@ nav a {
   display: grid;
   -ms-grid-columns: 25% 1fr 25%;
       grid-template-columns: 25% 1fr 25%;
+  padding-bottom: 55px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -562,6 +563,7 @@ nav a {
 }
 
 .container section.nature {
+  height: 510px !important;
   background-image: url("../assets/work/model-nature.jpeg");
 }
 
@@ -574,6 +576,23 @@ nav a {
 }
 
 .container section.pink {
+  height: 420px !important;
   background-image: url("../assets/work/whiteshoes.png");
+}
+
+.container section.techwear .medium-image:nth-child(1) {
+  background-image: url("../assets/work/techwear1.jpg");
+}
+
+.container section.techwear .medium-image:nth-child(2) {
+  background-image: url("../assets/work/pants.jpeg");
+}
+
+.container section.reebok .medium-image:nth-child(1) {
+  background-image: url("../assets/work/reebok1.png");
+}
+
+.container section.reebok .medium-image:nth-child(2) {
+  background-image: url("../assets/work/reebok2.jpeg");
 }
 /*# sourceMappingURL=main.css.map */
