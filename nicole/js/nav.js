@@ -1,12 +1,10 @@
 function nav() {
 
     const hamburger = document.querySelector(".menu");
-    // const hamburgerLines = document.querySelectorAll(".menu line");
     const navOpen = document.querySelector(".nav-open");
     const work = document.querySelector(".work-link");
     const personal = document.querySelector(".personal-link");
     const about = document.querySelector(".about-link");
-    // const logo = document.querySelector(".logo");
 
     let opened = false;
 
