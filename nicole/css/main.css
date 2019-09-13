@@ -53,7 +53,7 @@ body {
 }
 
 .wrapper section.hero {
-  background: url("../assets/ez.webp");
+  background: url("../assets/nicole hero.png");
   background-size: cover;
   background-position: center;
   display: -webkit-box;
@@ -446,7 +446,7 @@ nav a {
   display: grid;
   -ms-grid-columns: 25% 1fr 25%;
       grid-template-columns: 25% 1fr 25%;
-  padding-bottom: 55px;
+  padding-bottom: 100px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -455,6 +455,25 @@ nav a {
     display: grid;
     -ms-grid-columns: 5% 1fr 5%;
         grid-template-columns: 5% 1fr 5%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container section.reebok {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+  }
+  .container section.reebok .medium-image {
+    height: 450px !important;
+    background-size: 80% !important;
+  }
+  .container section.gigi {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
   }
 }
 
@@ -485,7 +504,7 @@ nav a {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 2em;
+  grid-column-gap: 1em;
 }
 
 .container section.image-grid-small .small-image {
@@ -507,20 +526,29 @@ nav a {
   background-image: url("../assets/work/girl-tshirt.png");
 }
 
+.container section.shoes {
+  -ms-grid-columns: 1fr !important;
+      grid-template-columns: 1fr !important;
+  grid-gap: 1em !important;
+}
+
 .container section.shoes .small-image {
-  height: 125px !important;
+  height: 200px !important;
 }
 
 .container section.shoes .small-image:nth-child(1) {
   background-image: url("../assets/work/sneaker1.jpeg");
+  background-size: 40% !important;
 }
 
 .container section.shoes .small-image:nth-child(2) {
   background-image: url("../assets/work/sneaker2.png");
+  background-size: 40% !important;
 }
 
 .container section.shoes .small-image:nth-child(3) {
   background-image: url("../assets/work/sneaker3.jpeg");
+  background-size: 40% !important;
 }
 
 .container section.models .small-image {
