@@ -129,7 +129,9 @@ body {
     grid-area: personal;
   }
   .wrapper {
-        grid-template-areas: "hero hero" "work personal" "work personal";
+        grid-template-areas: "hero hero"
+ "work personal"
+ "work personal";
   }
 }
 
@@ -622,5 +624,198 @@ nav a {
 
 .container section.reebok .medium-image:nth-child(2) {
   background-image: url("../assets/work/reebok2.jpeg");
+}
+
+.container section.personal-gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+}
+
+.container section.personal-gallery .gallery-img {
+  height: 300px;
+  background: red;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container section.personal-gallery .gallery-img:nth-child(1) {
+  background-image: url("../assets/personal/voley.jpeg");
+}
+
+.container section.personal-gallery .gallery-img:nth-child(2) {
+  background-image: url("../assets/personal/football.jpeg");
+}
+
+.container section.personal-gallery .gallery-img:nth-child(3) {
+  background-image: url("../assets/personal/ikea.jpeg");
+}
+
+.container section.personal-gallery .gallery-img:nth-child(4) {
+  background-image: url("../assets/personal/adidas-slippers.jpeg");
+}
+
+.container section.personal-gallery .gallery-img:nth-child(5) {
+  background-image: url("../assets/personal/patagonia-blue.jpeg");
+}
+
+.container section.personal-gallery .gallery-img:nth-child(6) {
+  background-image: url("../assets/personal/yellow-bootie.jpeg");
+}
+
+.container section.personal-gallery .gallery-img:nth-child(7) {
+  background-image: url("../assets/personal/adidas-bootie.jpeg");
+}
+
+.container section.personal-gallery .gallery-img:nth-child(8) {
+  background-image: url("../assets/personal/highheel.jpeg");
+}
+
+.container section.personal-gallery .gallery-img:nth-child(9) {
+  background-image: url("../assets/personal/baloons.jpeg");
+}
+
+.container section.personal-gallery .gallery-img:nth-child(10) {
+  background-image: url("../assets/personal/nikon.jpeg");
+}
+
+.container section.personal-gallery .gallery-img:nth-child(11) {
+  background-image: url("../assets/personal/batminton.jpeg");
+}
+
+.container section.personal-gallery .gallery-img:nth-child(12) {
+  background-image: url('../assets/personal/tennis.jpeg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(13) {
+  background-image: url('../assets/personal/carhartt-bootie.jpeg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(14) {
+  background-image: url('../assets/personal/carhartt-sweater.jpeg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(15) {
+  background-image: url('../assets/personal/polo-booties.jpeg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(16) {
+  background-image: url('../assets/personal/polo-shorts.jpeg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(17) {
+  background-image: url('../assets/personal/carhartt-bootie.jpeg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(18) {
+  background-image: url('../assets/personal/purple-slipper.jpeg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(19) {
+  background-image: url('../assets/personal/coleman-slipper.jpeg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(20) {
+  background-image: url('../assets/personal/tnf-umbrella.jpeg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(21) {
+  background-image: url('../assets/personal/reebok-shorts.jpeg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(22) {
+  background-image: url('../assets/personal/white-slipper.jpeg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(23) {
+  background-image: url('../assets/personal/bubble-coat.png');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(24) {
+  background-image: url('../assets/personal/pocket-dress.jpeg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(25) {
+  background-image: url('../assets/personal/natgeo-slipper.jpg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(26) {
+  background-image: url('../assets/personal/llbean-bootie.jpg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(27) {
+  background-image: url('../assets/personal/columbia-pants.jpeg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(28) {
+  background-image: url('../assets/personal/speedo-bootie.jpeg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(29) {
+  background-image: url('../assets/personal/ebay.jpg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(30) {
+  background-image: url('../assets/personal/mariot-slipper.jpeg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(31) {
+  background-image: url('../assets/personal/tnf-slipper.jpeg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(32) {
+  background-image: url('../assets/personal/patagonia-shorts.jpg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(33) {
+  background-image: url('../assets/personal/llbean-blue.jpg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(34) {
+  background-image: url('../assets/personal/tnf-gloves.jpg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(35) {
+  background-image: url('../assets/personal/carhartt-jumpsuit.jpg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(36) {
+  background-image: url('../assets/personal/1-chair.jpeg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(37) {
+  background-image: url('../assets/personal/gatorate-chair.jpeg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(38) {
+  background-image: url('../assets/personal/tnf-pingpong.jpeg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(39) {
+  background-image: url('../assets/personal/whole-vest.jpeg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(40) {
+  background-image: url('../assets/personal/brown-slipper.jpeg');
+}
+
+.container section.personal-gallery .gallery-img:nth-child(41) {
+  background-image: url('../assets/personal/tissue-shirt.jpeg');
+}
+
+@media only screen and (max-width: 1260px) {
+  .container section.personal-gallery {
+    -ms-grid-columns: 1fr 1fr !important;
+        grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .container section.personal-gallery .gallery-img {
+    height: 200px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
