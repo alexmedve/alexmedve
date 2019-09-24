@@ -313,7 +313,7 @@ nav {
 
 .content-wrapper {
     display: grid;
-    grid-template-columns: 25% 1fr 25%;
+    grid-template-columns: 20% 1fr 20%;
     padding-bottom: 100px;
 }
 
@@ -509,7 +509,6 @@ nav {
         // }
         .gallery-img {
             height: 300px;
-            background: red;
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -572,6 +571,21 @@ nav {
             // grid-template-columns: 1fr !important;
             .gallery-img {
                 height: 200px;
+            }
+        }
+    }
+}
+
+.content-wrapper {
+    .about {
+        grid-column: 2/3;
+        h1 {
+            font-size: 65px;
+            text-align: center;
+        }
+        .about-video {
+            video {
+                width: 100%;
             }
         }
     }
