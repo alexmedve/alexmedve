@@ -703,11 +703,27 @@ nav a {
 }
 
 .content-wrapper .about h1 {
-  font-size: 65px;
-  text-align: center;
+  font-size: 3.9em;
+  text-align: left;
+  font-weight: 500;
 }
 
 .content-wrapper .about .about-video video {
   width: 100%;
+}
+
+.content-wrapper .about h3 {
+  padding-top: 0.8rem;
+  font-size: 2.8em;
+  font-weight: 350;
+}
+
+.content-wrapper .about .mask {
+  height: 1200px;
+  width: 75%;
+  margin: 0 auto;
+  background: white;
+  -webkit-transform: translateY(-150px);
+          transform: translateY(-150px);
 }
 /*# sourceMappingURL=main.css.map */
