@@ -557,6 +557,122 @@ nav {
         .gallery-img:nth-child(11) {
             background-image: url('../assets/personal/batminton.jpeg');
         }
+
+        .gallery-img:nth-child(12) {
+            background-image: url('../assets/personal/tennis.jpeg');
+        }
+
+        .gallery-img:nth-child(13) {
+            background-image: url('../assets/personal/carhartt-bootie.jpeg');
+        }
+
+        .gallery-img:nth-child(14) {
+            background-image: url('../assets/personal/carhartt-sweater.jpeg');
+        }
+
+        .gallery-img:nth-child(15) {
+            background-image: url('../assets/personal/polo-booties.jpeg');
+        }
+
+        .gallery-img:nth-child(16) {
+            background-image: url('../assets/personal/polo-shorts.jpeg');
+        }
+
+        .gallery-img:nth-child(17) {
+            background-image: url('../assets/personal/purple-slipper.jpeg');
+        }
+
+        .gallery-img:nth-child(18) {
+            background-image: url('../assets/personal/coleman-slipper.jpeg');
+        }
+
+        .gallery-img:nth-child(19) {
+            background-image: url('../assets/personal/tnf-umbrella.jpeg');
+        }
+
+        .gallery-img:nth-child(20) {
+            background-image: url('../assets/personal/bubble-coat.png');
+        }
+
+        .gallery-img:nth-child(21) {
+            background-image: url('../assets/personal/pocket-dress.jpeg');
+        }
+
+        .gallery-img:nth-child(21) {
+            background-image: url('../assets/personal/natgeo-slipper.jpg');
+        }
+
+        .gallery-img:nth-child(22) {
+            background-image: url('../assets/personal/purple-red-slipper.jpeg');
+        }
+
+        .gallery-img:nth-child(23) {
+            background-image: url('../assets/personal/columbia-pants.jpeg');
+        }
+
+        .gallery-img:nth-child(24) {
+            background-image: url('../assets/personal/speedo-bootie.jpeg');
+        }
+
+        .gallery-img:nth-child(25) {
+            background-image: url('../assets/personal/ebay.jpg');
+        }
+
+        .gallery-img:nth-child(26) {
+            background-image: url('../assets/personal/mariot-slipper.jpeg');
+        }
+
+        .gallery-img:nth-child(27) {
+            background-image: url('../assets/personal/tnf-slipper.jpeg');
+        }
+
+        .gallery-img:nth-child(28) {
+            background-image: url('../assets/personal/patagonia-shorts.jpg');
+        }
+
+        .gallery-img:nth-child(29) {
+            background-image: url('../assets/personal/llbean-bootie.jpg');
+        }
+
+        .gallery-img:nth-child(30) {
+            background-image: url('../assets/personal/llbean-red.jpg');
+        }
+
+        .gallery-img:nth-child(31) {
+            background-image: url('../assets/personal/llbean-blue.jpg');
+        }
+
+        .gallery-img:nth-child(32) {
+            background-image: url('../assets/personal/tnf-gloves.jpg');
+        }
+
+        .gallery-img:nth-child(33) {
+            background-image: url('../assets/personal/carhartt-jumpsuit.jpg');
+        }
+
+        .gallery-img:nth-child(34) {
+            background-image: url('../assets/personal/1-chair.jpeg');
+        }
+
+        .gallery-img:nth-child(35) {
+            background-image: url('../assets/personal/gatorate-chair.jpeg');
+        }
+
+        .gallery-img:nth-child(36) {
+            background-image: url('../assets/personal/tnf-pingpong.jpeg');
+        }
+
+        .gallery-img:nth-child(37) {
+            background-image: url('../assets/personal/whole-vest.jpeg');
+        }
+
+        .gallery-img:nth-child(38) {
+            background-image: url('../assets/personal/brown-slipper.jpeg');
+        }
+
+        .gallery-img:nth-child(39) {
+            background-image: url('../assets/personal/tissue-shirt.jpeg');
+        }
     }
 
 
@@ -593,18 +709,47 @@ nav {
             }
         }
 
-        h3 {
-            padding-top: 0.8rem;
-            font-size: 2.8em;
-            font-weight: 350;
+        p {
+            font-size: 1.7em;
         }
 
-        .mask {
-            height: 1200px;
-            width: 75%;
-            margin: 0 auto;
-            background: white;
-            transform: translateY(-150px);
+        p.contact {
+            font-size: 1.4em;
+            opacity: 0.8;
+
+            a {
+                color: inherit;
+                margin: 8px 0 !important;
+            }
+        }
+
+        h2 {
+            margin: 35px 0 0;
+            font-weight: 300;
+        }
+
+        .test {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 0;
+
+            li {
+                font-size: 1.2em;
+                margin: 10px 0;
+
+                a {
+                    color: inherit;
+                }
+
+                i {
+                    opacity: 0.8;
+                }
+            }
         }
     }
 }
