@@ -1,0 +1,205 @@
+//@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap');
+
+//$montserrat: 'Montserrat', sans-serif;
+
+@font-face {
+    font-family: "montserrat";
+    src: url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap");
+}
+
+$grey : #707070;
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+body {
+    font-family: "montserrat", sans-serif;
+}
+
+* {
+    color: $grey;
+}
+
+nav {
+    min-height: 10vh;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+
+    a {
+        text-decoration: none;
+        font-size: 1.5em;
+
+        h3 {
+            font-weight: 500;
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            padding: 0 20px;
+        }
+    }
+
+    svg {
+        display: none;
+    }
+}
+
+.wrapper {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    height: 100%;
+
+    .container {
+        grid-column: 2/3;
+        // background: rgba(0, 0, 255, 0.2);
+
+        header {
+            height: 90vh;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "text img"
+                "svg svg";
+
+            .hero-text {
+                padding-top: 8vw;
+                grid-area: text;
+
+                h1 {
+                    margin-bottom: 10px;
+                    font-size: 2.5em;
+                    letter-spacing: 1.5px;
+                }
+
+                h2 {
+                    margin: 0;
+                    font-size: 1.75em;
+                    font-weight: 400;
+                }
+
+                button {
+                    cursor: pointer;
+                    margin-top: 10px;
+                    padding: 5px 15px;
+                    border-radius: 100px;
+                    border: $grey 3px solid;
+                    background: none;
+                }
+            }
+
+            svg {
+                grid-area: svg;
+                display: block;
+                position: relative;
+                margin: 0 auto;
+                margin-top: 12vw;
+            }
+
+            .hero-img {
+                grid-area: img;
+            }
+        }
+
+        section.cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 2em;
+
+            .card {
+                border: 3px solid $grey;
+                border-radius: 20px;
+                margin-bottom: 50px;
+
+                img {
+                    display: block;
+                    max-width: 70%;
+                    margin: 25px auto;
+                }
+
+                h3 {
+                    text-align: center;
+                }
+
+                p {
+                    text-align: left;
+                    max-width: 70%;
+                    margin: auto;
+                }
+
+                button {
+                    cursor: pointer;
+                    display: block;
+                    margin: 25px auto;
+                    border: 3px $grey solid;
+                    border-radius: 100px;
+                    background: none;
+                    font-size: 1.5em;
+                }
+            }
+        }
+
+        h2.section-header {
+            font-size: 3.5em;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 150px;
+            margin-bottom: 20px;
+        }
+
+        p.section-text {
+            text-align: center;
+            font-size: 1.7em;
+            max-width: 70%;
+            margin: 0 auto;
+            margin-bottom: 100px;
+        }
+
+        section.servers {
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    nav {
+        width: 90%;
+
+        .nav-links {
+            display: none;
+        }
+
+        svg {
+            display: initial;
+        }
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 5% 90% 5%;
+
+        .container {
+            section.cards {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+}
