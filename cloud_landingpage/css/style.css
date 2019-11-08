@@ -124,6 +124,16 @@ nav svg {
   position: relative;
   margin: 0 auto;
   margin-top: 12vw;
+  -webkit-animation-name: cta-anim;
+          animation-name: cta-anim;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
 .wrapper .container header .hero-img {
@@ -143,7 +153,6 @@ nav svg {
 .wrapper .container section.cards .card {
   border: 3px solid #707070;
   border-radius: 20px;
-  margin-bottom: 50px;
 }
 
 .wrapper .container section.cards .card img {
@@ -157,7 +166,7 @@ nav svg {
 }
 
 .wrapper .container section.cards .card p {
-  text-align: left;
+  text-align: center;
   max-width: 70%;
   margin: auto;
 }
@@ -213,6 +222,37 @@ nav svg {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+  }
+}
+
+@-webkit-keyframes cta-anim {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes cta-anim {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 /*# sourceMappingURL=style.css.map */
