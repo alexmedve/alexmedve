@@ -174,9 +174,16 @@ nav {
             margin-bottom: 100px;
         }
 
+        section.plan-formular {
+            height: 300px;
+            border: 3px solid $grey;
+            border-radius: 40px;
+        }
+
         section.servers {
+            width: 100%;
             img {
-                max-width: 100%;
+                width: 100%;
             }
         }
     }
