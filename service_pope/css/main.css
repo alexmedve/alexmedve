@@ -83,6 +83,8 @@ html, body {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px 0 25px;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 80% 1fr;
