@@ -58,6 +58,47 @@ $white: #ffffff;
 			cursor: pointer;
 		}
 	}
+	&__mobile {
+		position: absolute;
+		background: $white;
+		top: 0;
+		left: 0;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 10px 0 25px;
+		// transform: translateY(-100%);
+		display: grid;
+		grid-template-columns: 1fr 80% 1fr;
+
+		&__top {
+			grid-column: 2/3;
+			display: flex;
+			justify-content: space-between;
+			margin: 10px 0;
+		}
+
+		a {
+			grid-column: 2/3;
+			color: $dark;
+			text-decoration: none;
+			margin-top: 15px;
+			display: block;
+			font-size: 24px;
+			line-height: 24px;
+			text-align: center;
+		}
+		
+		a:hover {
+			color: $accent;
+			opacity: 0.7;
+		}
+
+		&__active {
+			color: $accent !important;
+		}
+	}
 }
 
 .banner {
@@ -95,4 +136,39 @@ $white: #ffffff;
 	.banner {
 		height: 40vh;
 	}
+}
+
+//animations
+.nav-open-anim {
+    animation-name: nav-open-anim;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes nav-open-anim {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.nav-open-anim-reverse {
+    animation-name: nav-open-anim-reverse;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes nav-open-anim-reverse {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
 }

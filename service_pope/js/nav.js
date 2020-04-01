@@ -1,7 +1,7 @@
 function nav() {
-    const button = document.querySelector("#mobileMenu");
-
-    let opened = false;
+    const buttonOpen = document.querySelector(".navbar__container__menu");
+    const buttonClose = document.querySelector(".navbar__mobile__top__button");
+    const navOpen = document.querySelector(".navbar__mobile");
 
     const throttle = (func, limit) => {
         let inThrottle
@@ -16,8 +16,22 @@ function nav() {
         }
     }
 
-    button.addEventListener('click', throttle(() => {
-        console.log(opened);
+    function openMenu() {
+        navOpen.classList.remove('nav-open-anim-reverse');
+        navOpen.classList.add('nav-open-anim');
+    }
+
+    function closeMenu() {
+        navOpen.classList.remove('nav-open-anim');
+        navOpen.classList.add('nav-open-anim-reverse');
+    }
+
+    buttonOpen.addEventListener('click', throttle(() => {
+        openMenu();
+    }, 700));
+
+    buttonClose.addEventListener('click', throttle(() => {
+        closeMenu();
     }, 700));
 }
 
