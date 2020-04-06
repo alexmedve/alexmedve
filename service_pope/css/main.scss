@@ -3,11 +3,16 @@
 	src: url('../assets/fonts/Montserrat-Medium.woff');
 }
 
-html, body {
+html,
+body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
 	height: 100;
+}
+
+body {
+	padding-bottom: 200px;
 }
 
 * {
@@ -33,7 +38,7 @@ $white: #ffffff;
 
 		&__list {
 			display: flex;
-			
+
 			a {
 				color: $dark;
 				text-decoration: none;
@@ -41,11 +46,11 @@ $white: #ffffff;
 				display: block;
 				font-size: 24px;
 				line-height: 24px;
+				font-weight: 500;
 			}
-			
+
 			a:hover {
 				color: $accent;
-				opacity: 0.7;
 			}
 
 			&__active {
@@ -58,6 +63,7 @@ $white: #ffffff;
 			cursor: pointer;
 		}
 	}
+
 	&__mobile {
 		position: absolute;
 		background: $white;
@@ -71,32 +77,32 @@ $white: #ffffff;
 		transform: translateY(-100%);
 		display: grid;
 		grid-template-columns: 1fr 80% 1fr;
+		z-index: 20;
 
 		&__top {
 			grid-column: 2/3;
 			display: flex;
 			justify-content: space-between;
 			margin: 10px 0;
+
+			&__button {
+				cursor: pointer;
+			}
 		}
 
 		a {
 			grid-column: 2/3;
 			color: $dark;
 			text-decoration: none;
-			margin-top: 15px;
+			margin-top: 20px;
 			display: block;
 			font-size: 24px;
 			line-height: 24px;
 			text-align: center;
 		}
-		
-		a:hover {
-			color: $accent;
-			opacity: 0.7;
-		}
 
 		&__active {
-			color: $accent !important;
+			color: $accent 21 !important;
 		}
 	}
 }
@@ -116,11 +122,112 @@ $white: #ffffff;
 	&__content {
 		grid-column: 2/3;
 		color: $white;
+		display: flex;
+		align-items: center;
+
+		&__container {
+			&__title {
+				font-size: 48px;
+				letter-spacing: 3px;
+				transform: translateY(-20px);
+				opacity: 0;
+				animation-name: banner-text-anim;
+				animation-duration: 0.5s;
+				animation-fill-mode: forwards;
+				animation-delay: 0.2s;
+			}
+
+			&__adress {
+				margin-top: 10px;
+				font-size: 28px;
+				transform: translateY(-20px);
+				opacity: 0;
+				animation-name: banner-text-anim;
+				animation-duration: 0.5s;
+				animation-fill-mode: forwards;
+				animation-delay: 0.6s;
+			}
+
+			&__phone {
+				color: $dark;
+				background: $white;
+				height: 40px;
+				width: 240px;
+				margin-top: 10px;
+				display: flex;
+				align-items: center;
+				transform: translateY(-20px);
+				opacity: 0;
+				background-image: url(../assets/images/phone_icon.png);
+				background-repeat: no-repeat;
+				background-position-y: center;
+				background-position-x: 10px;
+				background-size: 24px;
+				animation-name: banner-text-anim;
+				animation-duration: 0.5s;
+				animation-fill-mode: forwards;
+				animation-delay: 1s;
+
+				a {
+					color: $dark;
+					text-decoration: none;
+					margin-left: 40px;
+					font-size: 24px;
+					font-weight: 400;
+				}
+			}
+		}
 	}
 }
 
-@media only screen and (max-width: 900px)
-{
+.container {
+	display: grid;
+	grid-template-columns: 1fr 80% 1fr;
+
+	&__content {
+		grid-column: 2/3;
+
+		div.sectionTitle {
+			margin: 0 auto;
+			margin-top: 70px;
+			width: 400px;
+			border-bottom: 2px solid $accent;
+			padding-bottom: 10px;
+			color: $accent;
+			text-align: center;
+			font-size: 35px;
+		}
+
+		p.sectionParagraph {
+			margin-top: 30px;
+			color: $dark;
+			text-align: center;
+			font-size: 24px;
+		}
+
+		&__cards {
+			margin-top: 50px;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-gap: 30px;
+
+			&__card {
+				box-shadow: 6px 6px 16px 0px rgba(0,0,0,0.16);
+
+				&__heading {
+					margin-top: 15px;
+					padding-bottom: 20px;
+					color: $dark;
+					text-align: center; 
+					font-size: 24px;
+					border-bottom: 2px solid $accent;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 900px) {
 	.navbar {
 		&__container {
 			&__list {
@@ -140,35 +247,47 @@ $white: #ffffff;
 
 //animations
 .nav-open-anim {
-    animation-name: nav-open-anim;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+	animation-name: nav-open-anim;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
 }
 
 @keyframes nav-open-anim {
-    0% {
-        transform: translateY(-100%);
-    }
+	0% {
+		transform: translateY(-100%);
+	}
 
-    100% {
-        transform: translateY(0);
-    }
+	100% {
+		transform: translateY(0);
+	}
 }
 
 .nav-open-anim-reverse {
-    animation-name: nav-open-anim-reverse;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+	animation-name: nav-open-anim-reverse;
+	animation-duration: 0.5s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
 }
 
 @keyframes nav-open-anim-reverse {
-    0% {
-        transform: translateY(0);
-    }
+	0% {
+		transform: translateY(0);
+	}
 
-    100% {
-        transform: translateY(-100%);
-    }
+	100% {
+		transform: translateY(-100%);
+	}
+}
+
+@keyframes banner-text-anim {
+	0% {
+		transform: translateY(-20px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
