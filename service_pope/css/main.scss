@@ -285,6 +285,18 @@ $white: #ffffff;
 
 	.banner {
 		height: 40vh;
+
+		&__content {
+			&__container {
+				&__title {
+					font-size: 40px;
+				}
+				
+				&__adress {
+					font-size: 23px;
+				}
+			}
+		}
 	}
 
 	.container {
@@ -292,6 +304,11 @@ $white: #ffffff;
 
 			div.sectionTitle {
 				width: 100%;
+				font-size: 30px;
+			}
+
+			p.sectionParagraph {
+				font-size: 20px;
 			}
 
 			&__cards {
