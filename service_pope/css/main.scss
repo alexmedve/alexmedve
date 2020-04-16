@@ -325,6 +325,10 @@ $white: #ffffff;
 				div:hover {
 					border: 2px solid $accent;
 				}
+
+				div:nth-child(2) {
+					background-image: url(../assets/images/email_icon.png) !important;
+				}
 			}
 		}
 	}
@@ -335,7 +339,12 @@ $white: #ffffff;
 	position: relative;
 	width: 100%;
 	background: $dark;
-	height: 400px;
+	padding: 20px 0;
+
+	&__text {
+		text-align: center;
+		color: $white;
+	}
 }
 
 @media only screen and (max-width: 1150px) {

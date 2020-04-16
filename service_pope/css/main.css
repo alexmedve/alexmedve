@@ -398,12 +398,21 @@ body {
   border: 2px solid #315BBE;
 }
 
+.container__content__program__contact div:nth-child(2) {
+  background-image: url(../assets/images/email_icon.png) !important;
+}
+
 .footer {
   margin-top: 200px;
   position: relative;
   width: 100%;
   background: #4D4D4D;
-  height: 400px;
+  padding: 20px 0;
+}
+
+.footer__text {
+  text-align: center;
+  color: #ffffff;
 }
 
 @media only screen and (max-width: 1150px) {
